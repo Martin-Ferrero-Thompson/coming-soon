@@ -4,6 +4,7 @@ This repository contains the code for the "Coming Soon" landing page for Martin 
 
 ## Project Structure
 
+```
 coming-soon/
 ├── index.html
 ├── style.css
@@ -12,6 +13,7 @@ coming-soon/
 │   └── images/
 │       └── space-background.jpg
 ├── README.md
+```
 
 ## Technologies Used
 
