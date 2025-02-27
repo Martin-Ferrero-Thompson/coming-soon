@@ -7,6 +7,7 @@
   box-sizing: border-box;
 }
 
+/* Root Variables */
 :root {
   --brand-accent-color: #8214e0;
   --brand-name-black: #222222;
@@ -14,12 +15,11 @@
   --body-background-color: #f0f0f0;
   --heading-font-family: 'Montserrat', sans-serif;
   --body-font-family: 'Roboto Condensed', sans-serif;
-
-  /* --presents-font-family: 'Playfair Display', serif; */
   --presents-font-family: 'Cormorant Garamond', serif;
-  /* --presents-font-family: 'Dancing Script', cursive; */
+  --main-element-spacing: 1rem; /* Define the spacing variable */
 }
 
+/* Base Styles */
 html {
   font-size: 16px;
   height: 100%;
@@ -52,6 +52,31 @@ footer {
   position: relative;
 }
 
+/* Main Content Styles */
+main h1,
+main h2,
+main p {
+  margin-top: var(--main-element-spacing);
+  margin-bottom: var(--main-element-spacing);
+}
+
+main h1:first-child,
+main h2:first-child,
+main p:first-child {
+  margin-top: 0;
+}
+
+main p {
+  padding-bottom: var(--main-element-spacing);
+  max-width: 74ch; /* ensure max width is still present */
+  margin: var(--main-element-spacing) auto; /* Add margin auto to center */
+  line-height: 1.7;
+  text-align: start;
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+}
+
+/* Heading and Paragraph Styles */
 h1 {
   font-family: var(--heading-font-family);
   font-weight: 500;
@@ -69,20 +94,17 @@ h2 {
   font-weight: 500;
   font-size: 2.5rem;
   letter-spacing: 0.3rem;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
 }
 
 p {
   max-width: 74ch;
-  margin: 3rem auto;
-  padding-bottom: 3rem;
   line-height: 1.7;
   text-align: start;
   font-size: 1.5rem;
   letter-spacing: 0.05rem;
 }
 
+/* Layout Styles */
 .content-container {
   max-width: 1440px;
   margin: 0 auto;
@@ -105,36 +127,7 @@ p {
   flex-direction: column;
 }
 
-@media (min-width: 768px) {
-  .content-container {
-    max-width: 960px;
-  }
-  .content-wrapper {
-    padding: 60px 20px;
-  }
-  h1 {
-    font-size: 4.5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .content-container {
-    max-width: 1200px;
-  }
-  .content-wrapper {
-    padding: 80px 20px;
-  }
-  h1 {
-    font-size: 5rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .content-container {
-    max-width: 1440px;
-  }
-}
-
+/* Header Styles */
 header {
   display: flex;
   flex-direction: column;
@@ -147,10 +140,10 @@ header {
   font-weight: bold;
   line-height: 1.2;
   letter-spacing: 0.3rem;
-  margin-bottom: 20px;
   text-align: start;
   display: inline-block;
   text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 .accent-first {
@@ -179,14 +172,11 @@ header {
   font-size: 2.75rem;
   letter-spacing: 0.3rem;
   text-align: center;
-  margin: 15px 0 25px 0;
-  order: 1;
+  margin-top: 5px;
+  margin-bottom: 45px;
 }
 
-main {
-  flex-grow: 1;
-}
-
+/* Footer Styles */
 footer {
   width: 100%;
   text-align: center;
@@ -196,7 +186,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left:  50px;
+  margin-top: 50px;
+  margin-left: 50px;
   margin-right: 50px;
   font-size: 1.5rem;
 }
@@ -233,9 +224,9 @@ footer {
 }
 
 .footer-left .material-symbols-outlined {
-    margin-right: 5px;
-    font-size: 1.5rem;
-    color: var(--brand-accent-color);
+  margin-right: 5px;
+  font-size: 1.5rem;
+  color: var(--brand-accent-color);
 }
 
 .social-links a {
@@ -253,4 +244,35 @@ footer {
 .social-links img:hover {
   opacity: 0.7;
   filter: invert(46%) sepia(71%) saturate(2359%) hue-rotate(247deg) brightness(101%) contrast(100%);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .content-container {
+    max-width: 960px;
+  }
+  .content-wrapper {
+    padding: 60px 20px;
+  }
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .content-container {
+    max-width: 1200px;
+  }
+  .content-wrapper {
+    padding: 80px 20px;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content-container {
+    max-width: 1440px;
+  }
 }
