@@ -295,4 +295,137 @@ header {
     * Applies the accent color to the last `<span>` element within the short brand name.
 * **.presents-announcement:**
     * Styles the "Presents" announcement with font family, font weight, font size, letter spacing, text alignment, and margins.
-    
+
+### 8. Footer Styles
+
+```css
+footer {
+  width: 100%;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 1.5rem;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-left {
+  text-align: left;
+  justify-content: flex-start;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-right {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.footer-left a {
+  color: var(--body-text-color);
+  text-decoration: none;
+  margin-left: 0;
+}
+
+.footer-left a:hover {
+  color: var(--brand-accent-color);
+}
+
+.footer-left .material-symbols-outlined {
+  margin-right: 5px;
+  font-size: 1.5rem;
+  color: var(--brand-accent-color);
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-links img {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: opacity 0.3s ease;
+  filter: invert(36%) sepia(61%) saturate(2259%) hue-rotate(237deg) brightness(91%) contrast(90%);
+}
+
+.social-links img:hover {
+  opacity: 0.7;
+  filter: invert(46%) sepia(71%) saturate(2359%) hue-rotate(247deg) brightness(101%) contrast(100%);
+}
+```
+* **footer:**
+  * Sets the width and text alignment of the footer.
+* **.footer-content:**
+    * Uses flexbox to create a layout with space between elements, centers items vertically, and adds margins and font size.
+* **.footer-left, .footer-center, .footer-right:**
+    * Uses flexbox to distribute space equally and centers items.
+* **.footer-left:**
+    * Aligns text to the left, aligns items to the start, and uses inline flexbox to align items.
+* **.footer-right:**
+    * Aligns text to the right and aligns items to the end.
+* **.footer-left a:**
+    * Styles the email link with text color, removes text decoration, and removes left margin.
+* **.footer-left a:hover:**
+    * Changes the email link color on hover.
+*  **.footer-left .material-symbols-outlined:**
+    * Adds spacing, font size, and color to the email icon.
+* **.social-links a:**
+    * Makes the social links inline blocks and adds margins.
+* **.social-links img:**
+    * Sets the width, height, transition, and color filter for the social media icons.
+* **.social-links img:hover:**
+    * Changes the opacity and color filter of the social media icons on hover.
+
+### 9. Media Queries
+```css
+@media (min-width: 1440px) { /* xxl breakpoint */
+  .content-container {
+    max-width: 1440px;
+  }
+}
+
+@media (min-width: 1200px) { /* xl breakpoint */
+  .content-container {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 992px) { /* lg breakpoint */
+  .content-container {
+    max-width: 992px;
+  }
+  .content-wrapper {
+    padding: 80px 20px;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+  .content-container {
+    max-width: 768px;
+  }
+  .content-wrapper {
+    padding: 60px 20px;
+  }
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+```
