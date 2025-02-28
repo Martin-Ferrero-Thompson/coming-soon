@@ -152,3 +152,147 @@ main p {
     * **text-align: start;** aligns the text to the start (left for left-to-right languages).
     * **font-size: 1.5rem;** sets the font size of the paragraph.
     * **letter-spacing: 0.05rem;** adds a small amount of letter spacing, improving the overall visual appearance of the text.
+
+### 5.  Heading and Paragraph Styles
+```css
+h1 {
+  font-family: var(--heading-font-family);
+  font-weight: 500;
+  color: transparent;
+  font-size: 4rem;
+  letter-spacing: 2rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #8214e0, #6A5ACD, #483D8B);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+h2 {
+  font-family: var(--heading-font-family);
+  font-weight: 500;
+  font-size: 2.5rem;
+  letter-spacing: 0.3rem;
+}
+```
+
+* h1:
+  * Targets all `<h1>` elements on the page.
+    * **font-family: var(--heading-font-family);** sets the font family using the --heading-font-family CSS variable.
+    * **font-weight: 500;** sets the font weight.
+    * **color: transparent;** makes the text transparent, allowing the background gradient to show through.
+    * **font-size: 4rem;** sets the font size.
+    * **letter-spacing: 2rem;** adds a large amount of letter spacing, creating a dramatic effect.
+    * **text-transform: uppercase;** transforms the text to uppercase.
+    * **background-image: linear-gradient(to right, #8214e0, #6A5ACD, #483D8B);** applies a linear gradient background to the text.
+    * **-webkit-background-clip: text; and background-clip: text;** clip the background gradient to the text, making it appear as if the text itself has the gradient.
+* h2:
+  * Targets all `<h2>` elements on the page.
+    * **font-family: var(--heading-font-family);** sets the font family using the --heading-font-family CSS variable.
+    * **font-weight: 500;** sets the font weight.
+    * **font-size: 2.5rem;** sets the font size.
+    * **letter-spacing: 0.3rem;** adds letter spacing, enhancing the visual appearance of the heading.
+* p:
+    * Targets all `<p>` elements on the page.
+    * **max-width: 74ch;** sets a maximum width for the paragraph, ensuring it doesn't stretch too wide on larger screens, which improves readability.
+    * **line-height: 1.7;** sets the line height, improving text readability by adding vertical space between lines.
+    * **text-align: start;** aligns the text to the start (left for left-to-right languages).
+    * **font-size: 1.5rem;** sets the font size of the paragraph.
+    * **letter-spacing: 0.05rem;** adds a small amount of letter spacing, improving the overall visual appearance of the text.
+
+### 6. Layout Styles
+
+```css
+.content-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  border: 2px solid F8F8F8;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 90%;
+  background-color: rgba(248, 248, 248, 0.9);
+  display: flex;
+  flex-direction: column;
+}
+```
+* .content-container:
+  * Sets the maximum width, centers the container, adds padding, and uses flexbox to center its content vertically and horizontally.
+    * **min-height: 100vh;** makes the container take up the full height of the viewport.
+    * **.content-wrapper:** 
+        * Adds a border, padding, border radius, box sizing, width, and background color.
+        * Uses flexbox to arrange its content in a column.
+
+### 7. Header Styles
+```css
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-name {
+  font-family: var(--heading-font-family);
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 0.3rem;
+  text-align: start;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.accent-first {
+  color: var(--brand-accent-color);
+}
+
+.brand-name span:last-child {
+  color: var(--brand-name-black);
+  display: block;
+}
+
+.brand-name-short {
+  font-family: var(--heading-font-family);
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
+}
+
+.brand-name-short span:last-child {
+  color: var(--brand-accent-color);
+}
+
+.presents-announcement {
+  font-family: var(--presents-font-family);
+  font-weight: 700;
+  font-size: 2.75rem;
+  letter-spacing: 0.3rem;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 45px;
+}
+```
+* **header:**
+  * Uses flexbox to arrange the header content in a column and centers it horizontally.
+* **.brand-name:**
+  * Styles the brand name with font family, font size, font weight, line height, letter spacing, text alignment, display, text transformation, and margin.
+* **.accent-first:**
+  * Applies the accent color to the first word of the brand name.
+* **.brand-name span:last-child:**
+    * Styles the last `<span>` element within the brand name with the brand name black color and sets its display to block.
+* **.brand-name-short:**
+    * Styles the short brand name with font family, font weight, font size, and letter spacing.
+* **.brand-name-short span:last-child:**
+    * Applies the accent color to the last `<span>` element within the short brand name.
+* **.presents-announcement:**
+    * Styles the "Presents" announcement with font family, font weight, font size, letter spacing, text alignment, and margins.
+    
