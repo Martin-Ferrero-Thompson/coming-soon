@@ -263,4 +263,15 @@ footer {
   h1 {
     font-size: 4.5rem; /* Adjust font size */
   }
+  main p {
+    font-size: 1.2rem; /* Reduce font size */
+    max-width: 70ch; /* Reduce max-width */
+  }
+  .social-links img {
+    width: 1.2rem; /* Reduce social icon size */
+    height: 1.2rem; /* Reduce social icon size */
+  }
+  .social-links a {
+    margin: 0 5px; /* Reduce margin between social icons */
+  }
 }
