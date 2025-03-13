@@ -16,7 +16,7 @@
   --heading-font-family: 'Montserrat', sans-serif;
   --body-font-family: 'Roboto Condensed', sans-serif;
   --presents-font-family: 'Cormorant Garamond', serif;
-  --main-element-spacing: 1rem; /* Define the spacing variable */
+  --main-element-spacing: 1rem; 
 }
 
 /* Base Styles */
@@ -68,8 +68,8 @@ main p:first-child {
 
 main p {
   padding-bottom: var(--main-element-spacing);
-  max-width: 74ch; /* ensure max width is still present */
-  margin: var(--main-element-spacing) auto; /* Add margin auto to center */
+  max-width: 74ch; 
+  margin: var(--main-element-spacing) auto; 
   line-height: 1.7;
   text-align: start;
   font-size: 1.5rem;
@@ -247,12 +247,20 @@ footer {
 }
 
 /* Media Queries */
-/* xl breakpoint */
-/* @media (min-width: 1200px) { 
+@media (min-width: 1440px) { /* xxl breakpoint */
+  .content-container {
+    max-width: 1440px;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1200px) { /* xl breakpoint */
   .content-container {
     max-width: 1200px;
   }
-} */
+}
 
 @media (min-width: 992px) { /* lg breakpoint */
   .content-container {
@@ -277,11 +285,31 @@ footer {
   }
 }
 
-@media (min-width: 1440px) { /* xxl breakpoint */
-  .content-container {
-    max-width: 1440px;
+@media (max-width: 768px) { /* md and smaller breakpoints */
+  main p {
+    font-size: 1.25rem;
   }
-  h1 {
-    font-size: 4rem; /* Reset to original h1 font size */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+  .footer-center,
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .footer-center {
+    order: 1;
+  }
+  .footer-left {
+    order: 2;
+    justify-content: center;
+  }
+  .footer-right {
+    order: 3;
+    justify-content: center;
   }
 }
